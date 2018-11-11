@@ -1,4 +1,4 @@
-package controllers
+package web.controllers
 
 import com.ruchij.configuration.ServiceConfiguration
 import configuration.UserServiceConfigurableProps

@@ -6,6 +6,8 @@ import com.ruchij.eed3si9n.BuildInfo
 import scala.util.Properties
 
 object UserServiceConfiguration extends ServiceConfiguration[UserServiceConfigurableProps] {
+  self =>
+
   override def serviceInformation(): ServiceInformation =
     ServiceInformation(
       BuildInfo.name,
@@ -17,5 +19,5 @@ object UserServiceConfiguration extends ServiceConfiguration[UserServiceConfigur
     )
 
   override def configurableProps(): UserServiceConfigurableProps =
-    new UserServiceConfigurableProps(environmentVariables())
+    UserServiceConfigurableProps(self)
 }

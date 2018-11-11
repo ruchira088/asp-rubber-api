@@ -1,5 +1,10 @@
 package com.ruchij.exceptions
 
-case class ValidationException(validationError: String) extends Exception {
-  override def getMessage: String = validationError
+trait ValidationException extends Exception
+
+object ValidationException {
+  def apply(validationError: String): ValidationException =
+    new ValidationException {
+      override def getMessage: String = validationError
+    }
 }

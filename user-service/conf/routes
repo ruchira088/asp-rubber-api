@@ -1,2 +1,2 @@
 
-GET     /service-info               controllers.HomeController.serviceInformation()
+GET     /service-info               web.controllers.HomeController.serviceInformation()

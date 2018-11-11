@@ -8,5 +8,7 @@ class UserServiceConfigurationModule extends AbstractModule {
   override def configure(): Unit = {
     bind(new TypeLiteral[ServiceConfiguration[UserServiceConfigurableProps]] {})
       .toInstance(UserServiceConfiguration)
+
+    println(ServiceConfiguration.description(UserServiceConfiguration))
   }
 }
