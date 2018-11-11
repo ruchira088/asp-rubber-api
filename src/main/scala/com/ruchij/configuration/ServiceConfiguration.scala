@@ -13,5 +13,5 @@ trait ServiceConfiguration[+A] {
 
   def serviceInformation(): ServiceInformation
 
-  def configurableProperties(): A
+  def configurableProps(): A
 }
